@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .cb-slideshow li span { 
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: none;
+        opacity: 0;
+        z-index: 0;
+        animation: imageAnimation 36s linear infinite 0s; 
+    }
+    
+       
+    .cb-slideshow li:nth-child(1) span { 
+    background-image: url("img/bloodback5.jpg") 
+
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url("img/bloodback1.jpg");
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url("img/bloodback7.jpg");
+      animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url("img/bloodback9.jpg");
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url("img/bloodback6.jpg");
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url("img/bloodback4.jpg");
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1) ;
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1) ;
+	}
+    100% { opacity: 0 }
+}
+
+</style>
+  <link rel="stylesheet" href="finddonor.css">  
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find donor</title>
+
+</head>
+<body>
+    <ul class="cb-slideshow">
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+    <form class="login">
+        <input type="text" placeholder="Enter your Name" required>
+        <input type="text" placeholder="Enter your country" required>
+        <input type="text" placeholder="Enter your address" required>
+        <select name="question" id="question">
+           <option value="0">Select your blood group:</option>
+            <option value="1">A+</option>
+            <option value="2">A-</option>
+            <option value="3">B+</option>
+            <option value="4">B-</option>
+            <option value="5">O+</option>
+            <option value="6">O-</option>
+            <option value="7">AB+</option>
+            <option value="8">AB-</option>
+                 </select>
+            <select name="question" id="question">
+             <option value="0">Select your gender:</option>
+             <option value="1">M</option>
+             <option value="2">F</option>
+                 </select>
+                 <input type="number" placeholder="Enter your contact number" name="no" required>
+                 <select name="question" id="question">
+                    <option value="0">Enter organisation name</option>
+                    <option value="1">Basu pharmacy</option>
+                    <option value="2">Roy pharmacy</option>
+                    <option value="2">Das pharmacy</option>  
+                    <option value="2">Sen pharmacy</option>
+                </select>
+                 <button type="submit">Find donor</button>
+      </form>
+      
+      
+</body>
+</html>
